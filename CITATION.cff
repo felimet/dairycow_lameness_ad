@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, cite it together with the associated manuscript."
+title: "Reliability-aware anomaly detection of dairy cow lameness: analysis code"
+type: software
+version: 0.1.0
+date-released: 2026-09-06
+license: MIT
+authors:
+  - family-names: Zhou
+    given-names: Jia-Ming
+    affiliation: "Department of Bio-industrial Mechatronics Engineering, National Chung Hsing University"
+  - family-names: Chu
+    given-names: Wen-Lin
+    affiliation: "Department of Bio-industrial Mechatronics Engineering, National Chung Hsing University"
+  - family-names: Chiang
+    given-names: Hsin-I
+    affiliation: "Department of Animal Science, National Chung Hsing University"
+  - family-names: Paudyal
+    given-names: Sushil
+    affiliation: "Department of Animal Science, Texas A&M University"
+keywords:
+  - dairy cow
+  - lameness
+  - one-class anomaly detection
+  - energy images
+  - cow-independent cross-validation

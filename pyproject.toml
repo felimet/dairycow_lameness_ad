@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cowlame"
+version = "0.1.0"
+description = "Cow-independent energy-image anomaly detection of dairy cow lameness"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Jia-Ming Zhou"}]
+dependencies = ["numpy", "torch", "torchvision", "scikit-learn", "pandas", "pillow", "scipy", "pyyaml", "threadpoolctl"]
+
+[tool.setuptools.packages.find]
+include = ["cowlame*"]
+
+[tool.setuptools.package-data]
+cowlame = ["*.json"]

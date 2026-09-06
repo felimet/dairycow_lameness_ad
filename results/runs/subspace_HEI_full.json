@@ -1,0 +1,126 @@
+{
+  "signature": {
+    "config": {
+      "seed": 42,
+      "folds": 5,
+      "alpha": 0.45,
+      "image_size": 128,
+      "pca_components": 30,
+      "bank_fraction": 0.1,
+      "patchcore_blocks": 7,
+      "batch_size": 64,
+      "epochs": 40,
+      "learning_rate": 0.001,
+      "encoder_channels": [
+        32,
+        64,
+        128,
+        128
+      ],
+      "ae_kernel": 4,
+      "ae_stride": 2,
+      "ae_padding": 1,
+      "student_layers": 4,
+      "student_kernel": 3,
+      "student_channel_divisor": 2,
+      "imagenet_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "imagenet_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "pixel_max": 255.0,
+      "query_chunk": 4096,
+      "bank_chunk": 16384,
+      "permutation_count": 10000,
+      "confidence": 0.95,
+      "max_crowding": 3,
+      "normal_score": 1,
+      "cpu_threads": 4,
+      "device": "cuda",
+      "amp": true,
+      "pretrained": true,
+      "unknown_cow_policy": "single-group",
+      "cache_version": 1,
+      "modalities": [
+        "CGI",
+        "GEI",
+        "FDEI",
+        "HEI"
+      ],
+      "detectors": [
+        "patchcore",
+        "subspace",
+        "convae",
+        "stfpm"
+      ]
+    },
+    "manifest_hash": "055a7bbcc2e676d2ed26"
+  },
+  "summary": {
+    "n_passes": 252,
+    "folds": [
+      {
+        "fold": 0,
+        "auroc": 0.5232919254658385,
+        "auprc": 0.5931348013540702,
+        "max_f1": 0.717948717948718,
+        "threshold": 0.00013387094077188522
+      },
+      {
+        "fold": 1,
+        "auroc": 0.6536050156739812,
+        "auprc": 0.7582681598825998,
+        "max_f1": 0.7435897435897436,
+        "threshold": 0.00014877127250656486
+      },
+      {
+        "fold": 2,
+        "auroc": 0.5240384615384616,
+        "auprc": 0.5777391349164702,
+        "max_f1": 0.6666666666666666,
+        "threshold": 0.00010766743798740208
+      },
+      {
+        "fold": 3,
+        "auroc": 0.40229885057471265,
+        "auprc": 0.5092116201478418,
+        "max_f1": 0.7733333333333333,
+        "threshold": 0.00013648429012391716
+      },
+      {
+        "fold": 4,
+        "auroc": 0.5551948051948052,
+        "auprc": 0.4952162942274626,
+        "max_f1": 0.6285714285714286,
+        "threshold": 0.00012808656902052462
+      }
+    ],
+    "pooled": {
+      "auroc": 0.5381313131313132,
+      "auprc": 0.564868516392148,
+      "max_f1": 0.7008086253369272,
+      "threshold": 0.00012808656902052462
+    },
+    "auroc": {
+      "mean": 0.5316858116895598,
+      "ci_low": 0.4201312842313513,
+      "ci_high": 0.6432403391477682
+    },
+    "auprc": {
+      "mean": 0.5867140021056889,
+      "ci_low": 0.45658925351024526,
+      "ci_high": 0.7168387507011326
+    },
+    "max_f1": {
+      "mean": 0.7060219780219781,
+      "ci_low": 0.6335364699549976,
+      "ci_high": 0.7785074860889586
+    }
+  },
+  "elapsed_seconds": 4.249309999984689
+}

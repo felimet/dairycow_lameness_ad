@@ -1,0 +1,70 @@
+{
+  "raw_manifest_windows": 13752,
+  "raw_manifest_passes": 389,
+  "aligned_windows": 10086,
+  "aligned_passes": 252,
+  "known_cows": 155,
+  "groups_with_unknown": 156,
+  "unknown_passes": [
+    {
+      "recording": 7,
+      "pass": 2,
+      "score_1_3": 1
+    }
+  ],
+  "consensus_counts": {
+    "2": 126,
+    "1": 120,
+    "3": 6
+  },
+  "crowding_counts": {
+    "3": 165,
+    "2": 60,
+    "1": 27
+  },
+  "consensus_matches_gt_on_every_aligned_pass": true,
+  "folds": [
+    {
+      "fold": 0,
+      "train_passes": 201,
+      "test_passes": 51,
+      "normal_train_passes": 97
+    },
+    {
+      "fold": 1,
+      "train_passes": 201,
+      "test_passes": 51,
+      "normal_train_passes": 98
+    },
+    {
+      "fold": 2,
+      "train_passes": 202,
+      "test_passes": 50,
+      "normal_train_passes": 94
+    },
+    {
+      "fold": 3,
+      "train_passes": 202,
+      "test_passes": 50,
+      "normal_train_passes": 99
+    },
+    {
+      "fold": 4,
+      "train_passes": 202,
+      "test_passes": 50,
+      "normal_train_passes": 92
+    }
+  ],
+  "source_sha256": {
+    "window_manifest_maskfirst.csv": "1900f5f2e4738c638a45d534e99ad9cf0ce1e3ff92e137e627bccda172033571",
+    "gt_passes_001_118.csv": "0145309cea08d2450752a4a47a28ec113cc418545c6101c2a3a8acbca67975b2"
+  },
+  "expert_columns": [
+    "A",
+    "B",
+    "C"
+  ],
+  "unused_columns": [
+    "D"
+  ]
+}

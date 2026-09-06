@@ -1,0 +1,72 @@
+{
+  "elapsed_seconds": 1457.0786812000442,
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "jobs": [
+    [
+      "patchcore",
+      "CGI"
+    ],
+    [
+      "subspace",
+      "CGI"
+    ],
+    [
+      "patchcore",
+      "GEI"
+    ],
+    [
+      "patchcore",
+      "FDEI"
+    ],
+    [
+      "patchcore",
+      "HEI"
+    ],
+    [
+      "subspace",
+      "GEI"
+    ],
+    [
+      "subspace",
+      "FDEI"
+    ],
+    [
+      "subspace",
+      "HEI"
+    ],
+    [
+      "convae",
+      "CGI"
+    ],
+    [
+      "convae",
+      "GEI"
+    ],
+    [
+      "convae",
+      "FDEI"
+    ],
+    [
+      "convae",
+      "HEI"
+    ],
+    [
+      "stfpm",
+      "CGI"
+    ],
+    [
+      "stfpm",
+      "GEI"
+    ],
+    [
+      "stfpm",
+      "FDEI"
+    ],
+    [
+      "stfpm",
+      "HEI"
+    ]
+  ]
+}

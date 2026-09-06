@@ -1,0 +1,54 @@
+{
+  "patchcore_CGI_leg": {
+    "threshold": 6.549299296878633,
+    "marginal_flagging_rate": 0.9007936507936508,
+    "spearman_rho": 0.3048138196472208,
+    "spearman_p": 8.114433188737351e-07,
+    "severity": {
+      "1": {
+        "n": 120,
+        "detected": 102,
+        "median_score": 6.878437090803075,
+        "binomial_p_greater": 0.9723337331891764
+      },
+      "2": {
+        "n": 126,
+        "detected": 119,
+        "median_score": 7.16133345657809,
+        "binomial_p_greater": 0.06013083801036742
+      },
+      "3": {
+        "n": 6,
+        "detected": 6,
+        "median_score": 7.545607883196611,
+        "binomial_p_greater": 0.534259063415901
+      }
+    }
+  },
+  "subspace_CGI_leg": {
+    "threshold": 0.0004229597980156,
+    "marginal_flagging_rate": 0.9761904761904762,
+    "spearman_rho": 0.1857209974293865,
+    "spearman_p": 0.0030827800556971624,
+    "severity": {
+      "1": {
+        "n": 120,
+        "detected": 115,
+        "median_score": 0.00072873916360545,
+        "binomial_p_greater": 0.9321493775633625
+      },
+      "2": {
+        "n": 126,
+        "detected": 125,
+        "median_score": 0.00080102961510415,
+        "binomial_p_greater": 0.1955635764383852
+      },
+      "3": {
+        "n": 6,
+        "detected": 6,
+        "median_score": 0.0014895714703015502,
+        "binomial_p_greater": 0.8653810840486186
+      }
+    }
+  }
+}

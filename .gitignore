@@ -1,0 +1,22 @@
+cache/
+results/**/*.npy
+__pycache__/
+*.py[cod]
+*.pt
+*.pth
+*.egg-info/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/settings.json
+dist/
+build/
+graphify-out/
+
+# large or regenerable outputs
+results/ei_regen_check/
+results/seg_xcheck/
+results/**/*.partial.*

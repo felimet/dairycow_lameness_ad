@@ -1,0 +1,52 @@
+{
+  "source": "manuscript text (exact) unless a block states otherwise; null = not reported",
+  "estimand": "The manuscript's Evaluation protocol states that each reported point estimate is the metric computed on the pooled out-of-fold scores, and that the reported 95% confidence interval is the Student t interval across the five folds.",
+  "main_auroc": {
+    "source": "manuscript text (exact)",
+    "patchcore": {"CGI": 0.668, "GEI": 0.625, "FDEI": 0.596, "HEI": 0.515},
+    "subspace": {"CGI": 0.635, "GEI": 0.625, "FDEI": 0.599, "HEI": 0.535},
+    "convae": {"CGI": null, "GEI": null, "FDEI": null, "HEI": null},
+    "stfpm": {"CGI": null, "GEI": null, "FDEI": null, "HEI": null}
+  },
+  "fig4_read_auroc": {
+    "source": "manuscript figure (read, approximate)",
+    "note": "Bar heights read from manuscript Fig. 5 (leg crop, pass-level AUROC on the pooled out-of-fold scores, per the Evaluation protocol); about +/-0.01. Fig. 5 in the current numbering, in which the pipeline block diagram is Figure 1; this bar chart was Fig. 4 before that figure was inserted.",
+    "patchcore": {"CGI": 0.668, "GEI": 0.625, "FDEI": 0.596, "HEI": 0.515},
+    "subspace": {"CGI": 0.635, "GEI": 0.625, "FDEI": 0.599, "HEI": 0.535},
+    "convae": {"CGI": 0.568, "GEI": 0.525, "FDEI": 0.520, "HEI": 0.485},
+    "stfpm": {"CGI": 0.567, "GEI": 0.578, "FDEI": 0.530, "HEI": 0.510}
+  },
+  "full_auroc": {
+    "source": "manuscript text (exact), Table 2",
+    "patchcore": {"CGI": 0.502, "GEI": 0.473, "FDEI": 0.495, "HEI": 0.507},
+    "subspace": {"CGI": 0.631, "GEI": 0.614, "FDEI": 0.620, "HEI": 0.532}
+  },
+  "patchcore_cgi": {"source": "manuscript text (exact)", "ci": [0.58, 0.77], "ci_basis": "Student t interval across the five folds",
+    "per_fold_auroc_range": [0.56, 0.75], "pooled_auroc": 0.668,
+    "pooled_auroc_note": "The 0.668 headline AUROC, which the Evaluation protocol identifies as the pooled out-of-fold value; same number as main_auroc.patchcore.CGI.",
+    "auprc": 0.690, "max_f1": 0.697,
+    "permutation_p": "<0.001", "permutation_mean": 0.50,
+    "spearman_rho": 0.30, "spearman_n": 251, "spearman_p": "<0.001",
+    "median_score_by_severity": {"1": 7.24, "2": 7.45, "3": 7.74},
+    "mild_detected": 116, "mild_n": 126, "severe_detected": 5, "severe_n": 6},
+  "subspace_cgi": {"source": "manuscript text (exact)", "permutation_p": "<0.001", "mild_detected": null, "severe_detected": 6},
+  "crowding": {"source": "manuscript text (exact)", "patchcore": [0.807, 0.625, 0.661], "subspace": [0.619, 0.598, 0.655], "n": [27, 60, 164]},
+  "hei_band": [0.50, 0.52],
+  "fusion_auroc_approx": 0.58,
+  "fusion_auroc_approx_detector": "Subspace",
+  "fusion_auroc_approx_note": "The design-factor analysis states the about-0.58 late-fusion AUROC for the Subspace detector; no PatchCore late-fusion value is reported.",
+  "fusion_single_best_approx": 0.64,
+  "fusion_single_best_exact": 0.635,
+  "fusion_single_best_exact_note": "The manuscript's own comparison value for the about-0.58 fusion result: Subspace CGI, leg crop; same number as main_auroc.subspace.CGI.",
+  "percow_auroc_approx": 0.55,
+  "approximate_values_source": "manuscript text (stated as approximate): hei_band, fusion_auroc_approx, fusion_single_best_approx, percow_auroc_approx",
+  "cows_without_normal_pass": {"source": "manuscript text (exact)", "count": 67, "total": 174},
+  "convae_auroc_upper": 0.57,
+  "stfpm_auroc_band": [0.51, 0.58],
+  "hei_auroc_upper": 0.54,
+  "analysis_passes": 251,
+  "environment": {"source": "manuscript text (exact)", "gpu": "GTX 1080 8 GB", "cuda": "11.8", "pytorch": "2.5.1"},
+  "segmentation": {"source": "manuscript text (exact), Table 1", "claimed_split": "test", "n": 552,
+    "mask": {"precision": 0.992, "recall": 0.994, "map50": 0.995, "map": 0.839},
+    "box": {"precision": null, "recall": null, "map50": 0.995, "map": 0.990}}
+}

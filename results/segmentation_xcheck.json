@@ -1,0 +1,73 @@
+{
+  "settings": {
+    "imgsz": 512,
+    "batch": 16,
+    "workers": 0,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "mask_ratio": 4,
+    "overlap_mask": true,
+    "device": 0,
+    "display_decimals": 3
+  },
+  "ultralytics_version": "8.4.142",
+  "original_dataset_path": "<path>/dataset_seg/yolo_data_integrated",
+  "effective_dataset_path": "<path>/dataset_seg/yolo_data_integrated",
+  "source_hashes_before": {
+    "best.pt": "8c0685efa6a8dcc07bd3d350664bb4896278e907bcf325454838974001c128ee",
+    "dataset.yaml": "70d32f2e4260af8387b7226fad280829a72aad30c56f8a3dfce238b2aae8b0bd"
+  },
+  "splits": {
+    "val": {
+      "n_images": 1101,
+      "elapsed_seconds": 21.58221100002993,
+      "box": {
+        "precision": 0.9933821767097268,
+        "recall": 0.996232508073197,
+        "map50": 0.9946834616718967,
+        "map": 0.9883669593912975
+      },
+      "mask": {
+        "precision": 0.9933821767097268,
+        "recall": 0.996232508073197,
+        "map50": 0.9946834616718967,
+        "map": 0.8428214118087386
+      },
+      "table1_mean_absolute_delta": 0.0016170356427619252,
+      "matches_all_reported_values_at_3_decimals": false
+    },
+    "test": {
+      "n_images": 552,
+      "elapsed_seconds": 10.712334900046699,
+      "box": {
+        "precision": 0.9890944632957746,
+        "recall": 0.9923913043478261,
+        "map50": 0.9945606437798592,
+        "map": 0.9893948899118655
+      },
+      "mask": {
+        "precision": 0.9890944632957746,
+        "recall": 0.9923913043478261,
+        "map50": 0.9945606437798592,
+        "map": 0.849982001875796
+      },
+      "table1_mean_absolute_delta": 0.0028300094601019046,
+      "matches_all_reported_values_at_3_decimals": false
+    }
+  },
+  "source_hashes_after": {
+    "best.pt": "8c0685efa6a8dcc07bd3d350664bb4896278e907bcf325454838974001c128ee",
+    "dataset.yaml": "70d32f2e4260af8387b7226fad280829a72aad30c56f8a3dfce238b2aae8b0bd"
+  },
+  "blocked_write_attempts": [],
+  "table1_comparison": {
+    "exact_at_reported_precision": [],
+    "nearest_split": "val",
+    "split_with_reported_n": [
+      "test"
+    ],
+    "manuscript_statement": "held-out test set, n = 552"
+  }
+}
