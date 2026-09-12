@@ -1,5 +1,7 @@
 # Implementation choices where the Methods description admits more than one reading, and evidence boundaries of each analysis
 
+*Traditional Chinese version: [IMPLEMENTATION_NOTES.zh-TW.md](IMPLEMENTATION_NOTES.zh-TW.md)*
+
 Settings are fixed in `cowlame/config.py` and are logged at the start of a run by every script except `scripts/check_window_lists.py`. No setting is tuned toward a published value. Numbers obtained from the data are in `results/REPORT.md` (cohort section and comparison table) and are not repeated here.
 
 1. **Analysis cohort.** The aligned rows of `window_manifest_maskfirst.csv` define the evaluable passes; the counts obtained (windows, passes, cows, consensus scores, crowding strata) are written by `scripts/make_cohort.py` to `results/cohort.json` and summarized in `results/REPORT.md`. The manuscript reports one pass fewer and one fewer high-crowding pass; no pass is dropped to match those counts, and the difference is tabulated in the report. Every selected modality is validated against its own PNGs when the tensor cache is built.

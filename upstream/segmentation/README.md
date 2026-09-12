@@ -1,5 +1,7 @@
 # Upstream stage A: YOLO11m-seg instance segmentation (reference material)
 
+*Traditional Chinese version: [README.zh-TW.md](README.zh-TW.md)*
+
 Reference material for the segmentation/tracking stage that precedes energy-image synthesis, copied from the archived dataset/model package of the same authors. Notebook outputs were cleared (`outputs` emptied, execution counts reset) by a plain JSON rewrite.
 
 | File | Origin | Content |
