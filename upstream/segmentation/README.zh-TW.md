@@ -21,4 +21,4 @@ yolo segment train model=yolo11m-seg.pt data=dataset_seg/yolo_data_integrated/da
 yolo segment val model=best.pt data=dataset.yaml imgsz=512 split=test batch=16 conf=0.001 iou=0.7 half=False plots=False
 ```
 
-驗證集與測試集兩者與稿件 Table 1 的比對見 `docs/SEG_XCHECK.md`。多目標追蹤（稿件採用 ByteTrack；`tracker: botsort.yaml` 僅為 `args.yaml` 所記錄的 Ultralytics 預設值）未在這些 notebook 中執行，故無法自本材料驗證。
+驗證集與測試集兩者與稿件 Table 1 及 Results 數值的比對見 `docs/SEG_XCHECK.md`。多目標追蹤（稿件採用 ByteTrack；`tracker: botsort.yaml` 僅為 `args.yaml` 所記錄的 Ultralytics 預設值）未在這些 notebook 中執行，故無法自本材料驗證。

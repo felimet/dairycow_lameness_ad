@@ -62,12 +62,136 @@
     "dataset.yaml": "70d32f2e4260af8387b7226fad280829a72aad30c56f8a3dfce238b2aae8b0bd"
   },
   "blocked_write_attempts": [],
-  "table1_comparison": {
-    "exact_at_reported_precision": [],
-    "nearest_split": "val",
-    "split_with_reported_n": [
-      "test"
-    ],
-    "manuscript_statement": "held-out test set, n = 552"
+  "comparison": {
+    "table1": {
+      "label": "Manuscript Table 1 (val split, final epoch 100)",
+      "split": "val",
+      "n": 1101,
+      "n_reported": 6,
+      "n_exact_at_reported_precision": 2,
+      "mean_absolute_delta": 0.0016170356427619252,
+      "metrics": {
+        "mask precision": {
+          "observed": 0.9933821767097268,
+          "manuscript": 0.992,
+          "delta": 0.0013821767097268456,
+          "exact_at_reported_precision": false
+        },
+        "mask recall": {
+          "observed": 0.996232508073197,
+          "manuscript": 0.994,
+          "delta": 0.0022325080731969704,
+          "exact_at_reported_precision": false
+        },
+        "mask map50": {
+          "observed": 0.9946834616718967,
+          "manuscript": 0.995,
+          "delta": -0.0003165383281032996,
+          "exact_at_reported_precision": true
+        },
+        "mask map": {
+          "observed": 0.8428214118087386,
+          "manuscript": 0.839,
+          "delta": 0.0038214118087386284,
+          "exact_at_reported_precision": false
+        },
+        "box map50": {
+          "observed": 0.9946834616718967,
+          "manuscript": 0.995,
+          "delta": -0.0003165383281032996,
+          "exact_at_reported_precision": true
+        },
+        "box map": {
+          "observed": 0.9883669593912975,
+          "manuscript": 0.99,
+          "delta": -0.0016330406087025073,
+          "exact_at_reported_precision": false
+        }
+      }
+    },
+    "checkpoint_val_logged": {
+      "label": "Manuscript Results, retained checkpoint (epoch 96), logged val metrics",
+      "split": "val",
+      "n": 1101,
+      "n_reported": 4,
+      "n_exact_at_reported_precision": 3,
+      "mean_absolute_delta": 0.0006881587299414349,
+      "metrics": {
+        "mask precision": {
+          "observed": 0.9933821767097268,
+          "manuscript": 0.993,
+          "delta": 0.0003821767097268447,
+          "exact_at_reported_precision": true
+        },
+        "mask recall": {
+          "observed": 0.996232508073197,
+          "manuscript": 0.996,
+          "delta": 0.00023250807319696865,
+          "exact_at_reported_precision": true
+        },
+        "mask map50": {
+          "observed": 0.9946834616718967,
+          "manuscript": 0.995,
+          "delta": -0.0003165383281032996,
+          "exact_at_reported_precision": true
+        },
+        "mask map": {
+          "observed": 0.8428214118087386,
+          "manuscript": 0.841,
+          "delta": 0.0018214118087386266,
+          "exact_at_reported_precision": false
+        }
+      }
+    },
+    "checkpoint_test": {
+      "label": "Manuscript Results, retained checkpoint (epoch 96), test split",
+      "split": "test",
+      "n": 552,
+      "n_reported": 6,
+      "n_exact_at_reported_precision": 6,
+      "mean_absolute_delta": 0.000296228019991962,
+      "metrics": {
+        "mask precision": {
+          "observed": 0.9890944632957746,
+          "manuscript": 0.989,
+          "delta": 9.446329577456059e-05,
+          "exact_at_reported_precision": true
+        },
+        "mask recall": {
+          "observed": 0.9923913043478261,
+          "manuscript": 0.992,
+          "delta": 0.0003913043478260825,
+          "exact_at_reported_precision": true
+        },
+        "mask map50": {
+          "observed": 0.9945606437798592,
+          "manuscript": 0.995,
+          "delta": -0.00043935622014079634,
+          "exact_at_reported_precision": true
+        },
+        "mask map": {
+          "observed": 0.849982001875796,
+          "manuscript": 0.85,
+          "delta": -1.7998124203999488e-05,
+          "exact_at_reported_precision": true
+        },
+        "box map50": {
+          "observed": 0.9945606437798592,
+          "manuscript": 0.995,
+          "delta": -0.00043935622014079634,
+          "exact_at_reported_precision": true
+        },
+        "box map": {
+          "observed": 0.9893948899118655,
+          "manuscript": 0.989,
+          "delta": 0.0003948899118655369,
+          "exact_at_reported_precision": true
+        }
+      }
+    }
+  },
+  "command": {
+    "weights": "<path>/yolo11m-seg_cow/weights/best.pt",
+    "dataset": "<path>/dataset_seg/yolo_data_integrated/dataset.yaml"
   }
 }

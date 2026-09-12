@@ -16,7 +16,7 @@ Running the scripts produces pass-level out-of-fold scores for every configurati
 | `scripts/make_report.py` | Metrics, permutation tests, severity and crowding analyses, comparison with manuscript values, runtime summary | `results/REPORT.md`, `results/RUNTIME.md`, `results/summary.json`, `results/permutation.json`, `results/severity.json`, `results/crowding.csv`, `results/fig4_bars.csv` (`mean`, `ci_low`, `ci_high` are fold-based; `pooled_auroc` is the pooled out-of-fold estimand), `results/fig5_crowding.csv` |
 | `scripts/regenerate_ei.py` | Energy images from per-frame silhouettes with `cowlame/energy_images.py`, cross-checked against the archived images of one pass (`--window-list w30` or `gated` selects the `mask_meta.json` keep-list; `--compare-list` runs the other list as well and appends its table) | `docs/EI_XCHECK.md`, `results/ei_xcheck.csv`, `results/ei_xcheck.json`, `results/ei_xcheck_<list>.csv/.json` for the compared list, `results/ei_regen_check/` (PNGs, not versioned) |
 | `scripts/check_window_lists.py` | Manifest window count per pass against the keep-lists and stride period recorded in `mask_meta.json` | `results/window_lists.json` |
-| `scripts/segmentation_xcheck.py` | Ultralytics validation of the trained YOLO11m-seg weights on the `val` and `test` splits, compared with manuscript Table 1 | `docs/SEG_XCHECK.md`, `results/segmentation_xcheck.json` |
+| `scripts/segmentation_xcheck.py` | Ultralytics validation of the trained YOLO11m-seg weights on the `val` and `test` splits, compared with manuscript Table 1 and with the retained-checkpoint values reported in the Results (`--render-only` rewrites the comparison from the stored records) | `docs/SEG_XCHECK.md`, `results/segmentation_xcheck.json` |
 | `scripts/freeze_environment.py` | Pins the installed package versions (prints a diff against the tracked files by default; `--write` replaces them; conda build-host `file://` entries are pinned by their installed version; the raw `pip freeze` output is kept in `results/pip_freeze_full.txt`) | `requirements.txt`, `environment.yml`, `results/pip_freeze_full.txt` |
 | `scripts/verify_results.py` | Acceptance check of the deposited `results/` (file presence, grid completeness, cohort counts against `results/cohort.json`, cow-disjoint folds, curve lengths, permutation bookkeeping, segmentation hashes); no retraining | pass/fail |
 
@@ -85,10 +85,6 @@ Measured wall times of every configuration and stage are generated from the JSON
 ## Interpretation notes
 
 Choices made where the Methods description admits more than one reading, and the evidence boundaries of each analysis (pooled out-of-fold scores, oracle max-F1 threshold, label-permutation scope, transductive per-cow normalization, unadjusted crowding strata), are listed in [docs/IMPLEMENTATION_NOTES.md](docs/IMPLEMENTATION_NOTES.md). The energy-image cross-check is in [docs/EI_XCHECK.md](docs/EI_XCHECK.md) and the segmentation cross-check in [docs/SEG_XCHECK.md](docs/SEG_XCHECK.md).
-
-## Preparing the archive
-
-Export the deposit from the tracked tree, `git archive --format zip -o cowlame.zip HEAD`, or delete `cache/` before packaging a working copy. `cache/` is untracked and holds machine-local absolute paths (the environment prefix under the user's home directory and the research-data drive), which have no place in a public archive.
 
 ## Citation and license
 

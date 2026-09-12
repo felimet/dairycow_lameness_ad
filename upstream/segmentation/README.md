@@ -21,4 +21,4 @@ yolo segment train model=yolo11m-seg.pt data=dataset_seg/yolo_data_integrated/da
 yolo segment val model=best.pt data=dataset.yaml imgsz=512 split=test batch=16 conf=0.001 iou=0.7 half=False plots=False
 ```
 
-The manuscript Table 1 comparison for both splits is in `docs/SEG_XCHECK.md`. Multi-object tracking (ByteTrack in the manuscript; `tracker: botsort.yaml` is only the Ultralytics default recorded in `args.yaml`) is not exercised by these notebooks and cannot be verified from this material.
+The comparison of both splits with the manuscript's Table 1 and Results values is in `docs/SEG_XCHECK.md`. Multi-object tracking (ByteTrack in the manuscript; `tracker: botsort.yaml` is only the Ultralytics default recorded in `args.yaml`) is not exercised by these notebooks and cannot be verified from this material.

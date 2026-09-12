@@ -16,7 +16,7 @@
 | `scripts/make_report.py` | 指標、置換檢定、嚴重度與擁擠度分析、與稿件數值的比較、執行時間摘要 | `results/REPORT.md`、`results/RUNTIME.md`、`results/summary.json`、`results/permutation.json`、`results/severity.json`、`results/crowding.csv`、`results/fig4_bars.csv`（`mean`、`ci_low`、`ci_high` 基於摺；`pooled_auroc` 為合併出摺被估計量）、`results/fig5_crowding.csv` |
 | `scripts/regenerate_ei.py` | 以 `cowlame/energy_images.py` 自逐畫格輪廓產生能量影像，並與某一通過段的封存影像交叉核對（`--window-list w30` 或 `gated` 選擇 `mask_meta.json` 中的 keep-list；`--compare-list` 額外執行另一份清單並附加其表格） | `docs/EI_XCHECK.md`、`results/ei_xcheck.csv`、`results/ei_xcheck.json`、比較清單對應的 `results/ei_xcheck_<list>.csv/.json`、`results/ei_regen_check/`（PNG，不納入版控） |
 | `scripts/check_window_lists.py` | 將 manifest 中各通過段的視窗數與 `mask_meta.json` 所記錄的 keep-list 及步幅週期（stride period）核對 | `results/window_lists.json` |
-| `scripts/segmentation_xcheck.py` | 以 Ultralytics 在 `val`（驗證集）與 `test`（測試集）分割上驗證已訓練的 YOLO11m-seg 權重，並與稿件 Table 1 比較 | `docs/SEG_XCHECK.md`、`results/segmentation_xcheck.json` |
+| `scripts/segmentation_xcheck.py` | 以 Ultralytics 在 `val`（驗證集）與 `test`（測試集）分割上驗證已訓練的 YOLO11m-seg 權重，並與稿件 Table 1 及 Results 所報告的保留檢查點數值比較（`--render-only` 由已存紀錄重新產生比較） | `docs/SEG_XCHECK.md`、`results/segmentation_xcheck.json` |
 | `scripts/freeze_environment.py` | 釘選已安裝的套件版本（預設列印與受版控追蹤檔案的差異；`--write` 會取代這些檔案；conda 建置主機的 `file://` 項目以其已安裝版本釘選；原始 `pip freeze` 輸出保存於 `results/pip_freeze_full.txt`） | `requirements.txt`、`environment.yml`、`results/pip_freeze_full.txt` |
 | `scripts/verify_results.py` | 對存放的 `results/` 進行驗收檢查（檔案存在性、網格完整性、cohort 計數與 `results/cohort.json` 核對、各摺牛隻互斥、曲線長度、置換檢定簿記、分割雜湊）；不重新訓練 | pass/fail |
 
@@ -85,10 +85,6 @@ conda run -n cowlame python scripts/freeze_environment.py --write
 ## 詮釋說明
 
 當 Methods 描述容許多於一種解讀時所做的選擇，以及各分析的證據邊界（合併的出摺分數、oracle max-F1 閾值、標籤置換的範圍、轉導式（transductive）逐牛正規化、未校正的擁擠度分層），列於 [docs/IMPLEMENTATION_NOTES.zh-TW.md](docs/IMPLEMENTATION_NOTES.zh-TW.md)。能量影像交叉核對見 [docs/EI_XCHECK.zh-TW.md](docs/EI_XCHECK.zh-TW.md)，分割交叉核對見 [docs/SEG_XCHECK.zh-TW.md](docs/SEG_XCHECK.zh-TW.md)。
-
-## 準備封存檔
-
-自受版控追蹤的樹匯出存放內容，`git archive --format zip -o cowlame.zip HEAD`，或在打包工作副本前刪除 `cache/`。`cache/` 未受版控追蹤，且含有機器本地的絕對路徑（使用者家目錄下的環境前綴與研究資料磁碟），這些不應出現在公開封存檔中。
 
 ## 引用與授權
 
