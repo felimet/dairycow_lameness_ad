@@ -22,7 +22,7 @@ FDEI 使用保留區段峰值的靜態能量，加入前一畫格減當前畫格
 相符與不相符之處：HEI_comb6 r = 0.896，MAE = 0.076；FDEI r = 0.871，MAE = 0.220；GEI r = 0.863，MAE = 0.110；CGI r = 0.786，MAE = 0.151。每種模態的空間結構皆一致（所有平均 r 至少 0.786）；一致性以 HEI_comb6 最佳，FDEI 在強度上最弱（MAE 最大），其封存影像峰值為 0.52，而重新產生的影像峰值為 1.00，這與產生封存影像之管線對靜態項採用不同加權或正規化的情形相符，而該管線無法檢視。
 並不預期完全相同：封存的能量影像由 MATLAB 階段產生，該階段含形態學清理與身體比例裁切，兩者皆不屬於這些方程式，且視窗跳距未記錄於中繼資料。這些量測描述的是方程式的一個可執行參考實作；主要異常分析使用未經更動的封存 PNG。
 
-逐視窗數值：results/ei_xcheck.csv。results/ei_xcheck.json 在 `metadata` 下攜帶該通過段 mask_meta.json 的逐字副本（其 `note` 欄位為中文，描述遮罩匯出階段）。產生的 PNG：results/ei_regen_check/（未納入版控）。
+逐視窗數值：results/ei_xcheck.csv。results/ei_xcheck.json 在 `metadata` 下攜帶該通過段 mask_meta.json 的逐字副本（其 `note` 欄位為中文，描述遮罩匯出階段）。產生的 PNG：results/ei_regen_check/（1,368 個檔案，已納入本儲存庫版控）。
 
 ## 第二份 keep-list：`keep_windows_gated`
 

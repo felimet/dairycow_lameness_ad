@@ -20,7 +20,7 @@ FDEI uses segment-peak-retained static energy, adds positive previous-minus-curr
 What matches and what does not: HEI_comb6 r = 0.896, MAE = 0.076; FDEI r = 0.871, MAE = 0.220; GEI r = 0.863, MAE = 0.110; CGI r = 0.786, MAE = 0.151. Spatial structure agrees for every modality (all mean r at least 0.786); agreement is best for HEI_comb6 and weakest in intensity for FDEI (largest MAE), whose archived images peak at 0.52 while the regenerated ones peak at 1.00, consistent with a different weighting or normalization of the static term in the pipeline that produced the archived images, which cannot be inspected.
 Identity is not expected: the archived energy images were produced by the MATLAB stage with morphological cleaning and a body-proportion crop that are not part of these equations, and the window hop is not recorded in the metadata. These measurements characterize a runnable reference implementation of the equations; the main anomaly analysis uses the archived PNGs unchanged.
 
-Per-window values: results/ei_xcheck.csv. results/ei_xcheck.json carries the pass's mask_meta.json as a verbatim copy under `metadata` (its `note` field is in Chinese and describes the mask export stage). Generated PNGs: results/ei_regen_check/ (not versioned).
+Per-window values: results/ei_xcheck.csv. results/ei_xcheck.json carries the pass's mask_meta.json as a verbatim copy under `metadata` (its `note` field is in Chinese and describes the mask export stage). Generated PNGs: results/ei_regen_check/ (1,368 files, versioned with this repository).
 
 ## Second keep-list: `keep_windows_gated`
 
