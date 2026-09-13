@@ -1,4 +1,4 @@
-# Cow lameness one-class anomaly detection: analysis code
+# Cow lameness anomaly detection: analysis code
 
 *Traditional Chinese version: [README.zh-TW.md](README.zh-TW.md)*
 
