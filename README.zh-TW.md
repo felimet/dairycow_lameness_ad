@@ -88,4 +88,4 @@ conda run -n cowlame python scripts/freeze_environment.py --write
 
 ## 引用與授權
 
-引用本軟體時請以 `CITATION.cff` 連同稿件一併引用。`.zenodo.json` 載有存放的 metadata（creators：Zhou JM、Chu WL、Chiang HI、Paudyal S）。程式碼採 MIT 授權，版權所有 2026 Jia-Ming Zhou，但 `upstream/segmentation/` 中封存的上游素材除外，其依 Apache License 2.0 散布（`upstream/segmentation/LICENSE`）。第三方框架保留其各自的授權。程式碼由 Jia-Ming Zhou 撰寫（`pyproject.toml`、`LICENSE`）；稿件作者列為 `CITATION.cff` 與 `.zenodo.json` 中的 creators。
+引用本軟體時請以 `CITATION.cff` 連同稿件一併引用。v0.1.0 版本已送存 Zenodo，DOI 為 10.5281/zenodo.22734484（https://doi.org/10.5281/zenodo.22734484），本儲存庫為其鏡像。`.zenodo.json` 載有存放的 metadata（creators：Zhou JM、Chu WL、Chiang HI、Paudyal S）。程式碼採 MIT 授權，版權所有 2026 Jia-Ming Zhou，但 `upstream/segmentation/` 中封存的上游素材除外，其依 Apache License 2.0 散布（`upstream/segmentation/LICENSE`）。第三方框架保留其各自的授權。程式碼由 Jia-Ming Zhou 撰寫（`pyproject.toml`、`LICENSE`）；稿件作者列為 `CITATION.cff` 與 `.zenodo.json` 中的 creators。

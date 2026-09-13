@@ -5,6 +5,8 @@ type: software
 version: 0.1.0
 date-released: 2026-09-13
 license: MIT
+doi: 10.5281/zenodo.22734484
+repository-code: "https://github.com/felimet/dairycow_lameness_ad"
 authors:
   - family-names: Zhou
     given-names: Jia-Ming
