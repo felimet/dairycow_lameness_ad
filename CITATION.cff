@@ -3,7 +3,7 @@ message: "If you use this software, cite it together with the associated manuscr
 title: "Reliability-aware anomaly detection of dairy cow lameness: analysis code"
 type: software
 version: 0.1.0
-date-released: 2026-09-06
+date-released: 2026-09-13
 license: MIT
 authors:
   - family-names: Zhou
