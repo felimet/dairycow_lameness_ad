@@ -2,7 +2,7 @@
 
 *英文原版：README.md（兩版內容不一致時以英文版為準）*
 
-本分析程式碼實作 *Reliability-aware anomaly detection of dairy cow lameness from side-view gait and energy images under commercial-farm crowding*（Scientific Reports）所述之方法。套件 `cowlame` 實作自二值輪廓合成能量影像（GEI、CGI、FDEI、HEI）、僅以正常通過段（pass）擬合的四種單類別（one-class）異常檢測器（PCA subspace、PatchCore、卷積自編碼器、STFPM）、依牛隻分組的五摺 `GroupKFold` 評估（含通過段層級的 AUROC/AUPRC/max-F1 與基於 t 分布的 95% 區間）、標籤置換檢定、嚴重度與擁擠度分析，以及設計因子分析（全幅影像相對於腿部裁切、HEI 通道排列、晚期融合、逐牛分數正規化）。另有獨立腳本在兩個資料集分割（split）上驗證上游的 YOLO11m-seg 模型。
+本分析程式碼實作稿件 *Reliability-aware anomaly detection of dairy cow lameness from side-view gait and energy images under commercial-farm crowding* 所述之方法，該稿件正於 *Scientific Reports* 審查中。稿件尚未發表，此處內容均不應視為已發表結果。套件 `cowlame` 實作自二值輪廓合成能量影像（GEI、CGI、FDEI、HEI）、僅以正常通過段（pass）擬合的四種單類別（one-class）異常檢測器（PCA subspace、PatchCore、卷積自編碼器、STFPM）、依牛隻分組的五摺 `GroupKFold` 評估（含通過段層級的 AUROC/AUPRC/max-F1 與基於 t 分布的 95% 區間）、標籤置換檢定、嚴重度與擁擠度分析，以及設計因子分析（全幅影像相對於腿部裁切、HEI 通道排列、晚期融合、逐牛分數正規化）。另有獨立腳本在兩個資料集分割（split）上驗證上游的 YOLO11m-seg 模型。
 
 執行這些腳本會產生每一組態的通過段層級出摺（out-of-fold）分數、各摺與合併（pooled）指標、訓練曲線、圖表資料 CSV，以及 `results/REPORT.md`，後者為本處所得數值與稿件所報數值的並列對照表。
 
