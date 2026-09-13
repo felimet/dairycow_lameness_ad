@@ -19,8 +19,8 @@ authors:
     given-names: Sushil
     affiliation: "Department of Animal Science, Texas A&M University"
 keywords:
-  - dairy cow
-  - lameness
-  - one-class anomaly detection
-  - energy images
-  - cow-independent cross-validation
+  - dairy cattle lameness
+  - gait energy image
+  - anomaly detection
+  - instance segmentation
+  - inter-rater reliability

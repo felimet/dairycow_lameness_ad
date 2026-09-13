@@ -11,6 +11,6 @@
   "license": "MIT",
   "notes": "upstream/segmentation/ is distributed under the Apache License 2.0 (upstream/segmentation/LICENSE); the rest of the repository is MIT.",
   "access_right": "open",
-  "keywords": ["dairy cow", "lameness", "one-class anomaly detection", "gait energy image", "cow-independent cross-validation"],
+  "keywords": ["dairy cattle lameness", "gait energy image", "anomaly detection", "instance segmentation", "inter-rater reliability"],
   "version": "0.1.0"
 }
